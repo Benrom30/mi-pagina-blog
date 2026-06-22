@@ -1,0 +1,26 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="section-intro mb-4">
+  {{ .Content }}
+</div>
+
+{{ if .Pages }}
+<ul class="list-unstyled">
+  {{ range .Pages }}
+  <li class="mb-4 pb-4 border-bottom">
+    <h2 class="h4 mb-1">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+    <p class="text-muted mb-2">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 de January, 2006" }}</time>
+    </p>
+    <p>{{ .Summary }}</p>
+  </li>
+  {{ end }}
+</ul>
+{{ else if or (eq .Section "diario") (eq .Section "tutoriales") }}
+<p class="alert alert-info" role="status">
+  Todavía no hay contenido publicado en esta sección. ¡Pronto vas a encontrar algo acá!
+</p>
+{{ end }}
+{{ end }}

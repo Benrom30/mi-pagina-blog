@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link{{ if .IsHome }} active{{ end }}"{{ if .IsHome }} aria-current="page"{{ end }} href="{{ "/" | relURL }}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ if eq .Section "diario" }} active{{ end }}"{{ if eq .Section "diario" }} aria-current="page"{{ end }} href="{{ "/diario/" | relURL }}">Mi diario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ if eq .Section "tutoriales" }} active{{ end }}"{{ if eq .Section "tutoriales" }} aria-current="page"{{ end }} href="{{ "/tutoriales/" | relURL }}">Tutoriales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ if eq .Section "contacto" }} active{{ end }}"{{ if eq .Section "contacto" }} aria-current="page"{{ end }} href="{{ "/contacto/" | relURL }}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
