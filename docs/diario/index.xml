@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mi diario on Aprendiendo a programar</title>
-    <link>https://example.org/diario/</link>
+    <link>https://benrom30.github.io/mi-pagina-blog/diario/</link>
     <description>Recent content in Mi diario on Aprendiendo a programar</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="https://example.org/diario/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://benrom30.github.io/mi-pagina-blog/diario/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

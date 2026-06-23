@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutoriales on Aprendiendo a programar</title>
-    <link>https://example.org/tutoriales/</link>
+    <link>https://benrom30.github.io/mi-pagina-blog/tutoriales/</link>
     <description>Recent content in Tutoriales on Aprendiendo a programar</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="https://example.org/tutoriales/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://benrom30.github.io/mi-pagina-blog/tutoriales/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
