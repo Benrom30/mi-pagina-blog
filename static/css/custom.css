@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap');
+
 :root {
   --color-fondo: #f0f7f7;
   --color-texto: #0a2020;
@@ -11,54 +13,136 @@
 }
 
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   color: var(--color-texto);
   background-color: var(--color-fondo);
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-texto);
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+
+p {
+  margin-bottom: 1.4rem;
+  max-width: 70ch;
 }
 
 a {
   color: var(--color-enlace);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
   color: var(--color-enlace-hover);
+  text-decoration: underline;
+}
+
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
 }
 
 .navbar-dark.bg-dark {
   background-color: #057a7a !important;
 }
 
+.navbar-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
 .btn-primary {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: var(--color-primario-hover);
   border-color: var(--color-primario-hover);
+  transform: translateY(-1px);
 }
 
 .btn-outline-primary {
   color: var(--color-primario);
   border-color: var(--color-primario);
+  font-weight: 600;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
+  transform: translateY(-1px);
 }
 
 .card {
-  border-color: var(--color-borde);
+  border: 1px solid var(--color-borde);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(6, 148, 148, 0.12);
+}
+
+.card-body {
+  padding: 1.75rem;
+}
+
+.card-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
 .card-link {
   color: var(--color-acento);
   font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.card-link:hover {
+  color: var(--color-primario);
+  text-decoration: none;
 }
 
 .skip-link {
@@ -81,18 +165,36 @@ a:focus {
 }
 
 .hero {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero .lead {
   color: var(--color-texto-secundario);
+  font-size: 1.15rem;
+  max-width: 60ch;
+  line-height: 1.7;
 }
 
 .site-footer {
   color: var(--color-texto-secundario);
+  border-top: 1px solid var(--color-borde);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
 }
 
 .site-footer a {
   font-weight: 600;
+  color: var(--color-primario);
+}
+
+.site-footer a:hover {
+  color: var(--color-acento);
 }
