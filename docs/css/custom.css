@@ -1,20 +1,20 @@
 :root {
-  --color-fondo: #f8f9fa;
-  --color-texto: #1a1a2e;
-  --color-texto-secundario: #4a4a68;
-  --color-primario: #1b4965;
-  --color-primario-hover: #143752;
-  --color-acento: #ca6702;
-  --color-borde: #dee2e6;
-  --color-enlace: #1b4965;
-  --color-enlace-hover: #ca6702;
+  --color-fondo: #f0f7f7;
+  --color-texto: #0a2020;
+  --color-texto-secundario: #2d5a5a;
+  --color-primario: #069494;
+  --color-primario-hover: #057a7a;
+  --color-acento: #e07b00;
+  --color-borde: #b2d8d8;
+  --color-enlace: #069494;
+  --color-enlace-hover: #e07b00;
 }
 
 body {
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   color: var(--color-texto);
   background-color: var(--color-fondo);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 a {
@@ -27,7 +27,7 @@ a:focus {
 }
 
 .navbar-dark.bg-dark {
-  background-color: var(--color-texto) !important;
+  background-color: #057a7a !important;
 }
 
 .btn-primary {
