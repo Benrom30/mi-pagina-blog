@@ -198,3 +198,54 @@ a:focus {
 .site-footer a:hover {
   color: var(--color-acento);
 }
+/* Botones de accesibilidad */
+.btn-accesibilidad {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.btn-accesibilidad:hover,
+.btn-accesibilidad:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Modo alto contraste */
+body.alto-contraste {
+  --color-fondo: #000000;
+  --color-texto: #ffffff;
+  --color-texto-secundario: #eeeeee;
+  --color-primario: #00ffff;
+  --color-primario-hover: #00cccc;
+  --color-acento: #ffff00;
+  --color-borde: #ffffff;
+  --color-enlace: #00ffff;
+  --color-enlace-hover: #ffff00;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.alto-contraste .navbar {
+  background-color: #000000 !important;
+  border-bottom: 2px solid #ffffff;
+}
+
+body.alto-contraste .card {
+  background-color: #111111;
+  border-color: #ffffff;
+}
+
+body.alto-contraste .btn-accesibilidad {
+  border-color: #ffffff;
+  color: #ffffff;
+}
