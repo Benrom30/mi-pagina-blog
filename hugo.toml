@@ -1,5 +1,5 @@
 baseURL = 'https://benrom30.github.io/mi-pagina-blog/'
 languageCode = 'es'
-title = 'Aprendiendo a programar'
+title = 'programate'
 publishDir = "docs"
 canonifyURLs = true
