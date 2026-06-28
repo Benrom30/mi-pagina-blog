@@ -1,38 +1,50 @@
 {{ define "main" }}
-<section class="hero mb-5" aria-labelledby="titulo-principal">
-<h1 id="titulo-principal" class="display-5 fw-bold">{{ .Site.Title }}</h1>
-<p class="lead">
-    No soy un experto ni un gurú, soy una persona ciega aprendiendo a programar y quiero compartir el camino con quienes estén en una situación similar.
-</p>
-<p>
-    En este sitio voy contando lo que voy aprendiendo sobre Hugo, Bootstrap, Git/GitHub y Python, paso a paso y sin pretender tener todas las respuestas.
-</p>
+<section class="hero" aria-labelledby="titulo-principal">
+  <div class="container">
+    <h1 id="titulo-principal">{{ .Site.Title }}</h1>
+    <p class="lead">
+      No soy un experto ni un gurú, soy una persona ciega aprendiendo a programar y quiero compartir el camino con quienes estén en una situación similar.
+    </p>
+    <p>
+      En este sitio voy contando lo que voy aprendiendo sobre Hugo, Bootstrap, Git/GitHub y Python, paso a paso y sin pretender tener todas las respuestas.
+    </p>
+  </div>
 </section>
-<section aria-labelledby="titulo-secciones">
-<h2 id="titulo-secciones" class="h3 mb-4">Qué vas a encontrar acá</h2>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-<div class="col">
-<article class="card h-100">
-<div class="card-body">
-<h3 class="card-title h5">Mi diario</h3>
-<p class="card-text">
-            El día a día aprendiendo a programar, incluidas las dificultades reales del proceso.
-</p>
-<a href="{{ "/diario/" | relURL }}" class="card-link stretched-link">Ir al diario</a>
+<div class="container">
+  <section aria-labelledby="titulo-secciones">
+    <h2 id="titulo-secciones" class="h3 mb-4 text-center">Qué vas a encontrar acá</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <article class="card h-100">
+          <div class="card-body">
+            <span class="card-icon" aria-hidden="true">📓</span>
+            <h3 class="card-title">Mi diario</h3>
+            <p class="card-text">El día a día aprendiendo a programar, incluidas las dificultades reales del proceso.</p>
+            <a href="{{ "/diario/" | relURL }}" class="card-link stretched-link">Ir al diario</a>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="card h-100">
+          <div class="card-body">
+            <span class="card-icon" aria-hidden="true">💻</span>
+            <h3 class="card-title">Tutoriales</h3>
+            <p class="card-text">Contenido práctico sobre Hugo, Bootstrap, Git/GitHub, Python y accesibilidad.</p>
+            <a href="{{ "/tutoriales/" | relURL }}" class="card-link stretched-link">Ver tutoriales</a>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="card h-100">
+          <div class="card-body">
+            <span class="card-icon" aria-hidden="true">✉️</span>
+            <h3 class="card-title">Contacto</h3>
+            <p class="card-text">Escribime por cualquier duda o consulta, me encantaría saber de vos.</p>
+            <a href="{{ "/contacto/" | relURL }}" class="card-link stretched-link">Ir a contacto</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </div>
-</article>
-</div>
-<div class="col">
-<article class="card h-100">
-<div class="card-body">
-<h3 class="card-title h5">Tutoriales</h3>
-<p class="card-text">
-            Contenido práctico sobre Hugo, Bootstrap, conectar la compu a GitHub, Python, accesibilidad y programación.
-</p>
-<a href="{{ "/tutoriales/" | relURL }}" class="card-link stretched-link">Ver tutoriales</a>
-</div>
-</article>
-</div>
-</div>
-</section>
 {{ end }}
