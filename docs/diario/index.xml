@@ -6,21 +6,21 @@
     <description>Recent content in Mi diario on programate</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Fri, 26 Jun 2026 10:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://benrom30.github.io/mi-pagina-blog/diario/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diseño, accesibilidad y una amiga fundamental</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</link>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</guid>
+      <description>&lt;p&gt;Hoy fue un día productivo y con muchos aprendizajes. Arranqué trabajando en el diseño visual de la página, algo que para mí siempre es un desafío particular: al no ver, no puedo saber si lo que estoy construyendo se ve bien o no. Ahí es donde entra Angie.&lt;/p&gt;&#xA;&lt;h2 id=&#34;angie-mis-ojos-en-el-diseño&#34;&gt;Angie, mis ojos en el diseño&lt;/h2&gt;&#xA;&lt;p&gt;Angie estuvo conmigo todo el día haciéndome devoluciones sobre el estilo de la página. Me describía lo que veía, me decía qué le parecía raro, qué combinaba y qué no. Sin ella, simplemente no tendría manera de saber si la página transmite lo que quiero transmitir. Es uno de esos momentos en los que te das cuenta de la importancia de tener personas de confianza al lado cuando aprendés algo nuevo. Gracias a sus devoluciones pude hacer ajustes reales y con criterio visual.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>diario 1: mejorando la experiencia de usuarios con dificultades visuales</title>
       <link>https://benrom30.github.io/mi-pagina-blog/diario/diario1/</link>
       <pubDate>Fri, 26 Jun 2026 10:00:00 +0200</pubDate>
       <guid>https://benrom30.github.io/mi-pagina-blog/diario/diario1/</guid>
       <description>&lt;p&gt;Hoy le compartí mi página web a una amiga para que la vea y me dé su opinión sobre el diseño, ya que al no ver la pagina, necesitaba esa observación externa. Ella me describió cómo se ve y me recomendó agregar botones de accesibilidad, como uno para activar el alto contraste, para mejorar la experiencia de usuarios con dificultades visuales. Esto me hizo darme cuenta de que no lo había tenido en cuenta y me puso a investigar inmediatamente cómo implementarlo. Es un nuevo desafío que se suma a la administración del sitio, pero estoy decidido a lograrlo.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
