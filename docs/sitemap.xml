@@ -2,21 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/</loc>
+    <lastmod>2026-06-29T14:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://benrom30.github.io/mi-pagina-blog/</loc>
+    <lastmod>2026-06-29T14:30:00+02:00</lastmod>
+  </url><url>
+    <loc>https://benrom30.github.io/mi-pagina-blog/tutoriales/</loc>
+    <lastmod>2026-06-29T14:30:00+02:00</lastmod>
+  </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</loc>
     <lastmod>2026-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/diario/</loc>
     <lastmod>2026-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://benrom30.github.io/mi-pagina-blog/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/diario/diario1/</loc>
     <lastmod>2026-06-26T10:00:00+02:00</lastmod>
   </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/contacto/</loc>
-  </url><url>
-    <loc>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/</loc>
   </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/tutoriales/hugo/</loc>
   </url><url>
@@ -27,7 +31,5 @@
     <loc>https://benrom30.github.io/mi-pagina-blog/categories/</loc>
   </url><url>
     <loc>https://benrom30.github.io/mi-pagina-blog/tags/</loc>
-  </url><url>
-    <loc>https://benrom30.github.io/mi-pagina-blog/tutoriales/</loc>
   </url>
 </urlset>
