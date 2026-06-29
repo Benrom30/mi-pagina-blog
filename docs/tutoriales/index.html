@@ -13,11 +13,19 @@
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
-  <div class="container">
+  <div class="container d-flex align-items-center">
     <a class="navbar-brand fw-semibold" href="https://benrom30.github.io/mi-pagina-blog/">programate</a>
+
+    <div class="d-flex align-items-center gap-2 ms-auto me-2" role="group" aria-label="Opciones de accesibilidad">
+      <button id="btn-texto-menor" class="btn-accesibilidad" aria-label="Reducir tamaño de texto">A-</button>
+      <button id="btn-texto-mayor" class="btn-accesibilidad" aria-label="Aumentar tamaño de texto">A+</button>
+      <button id="btn-contraste" class="btn-accesibilidad" aria-label="Activar alto contraste">◑</button>
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarPrincipal">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item">
@@ -31,11 +39,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://benrom30.github.io/mi-pagina-blog/contacto/">Contacto</a>
-        </li>
-        <li class="nav-item ms-3 d-flex align-items-center gap-2" role="group" aria-label="Opciones de accesibilidad">
-          <button id="btn-texto-menor" class="btn-accesibilidad" aria-label="Reducir tamaño de texto">A-</button>
-          <button id="btn-texto-mayor" class="btn-accesibilidad" aria-label="Aumentar tamaño de texto">A+</button>
-          <button id="btn-contraste" class="btn-accesibilidad" aria-label="Activar alto contraste">◑</button>
         </li>
       </ul>
     </div>
@@ -112,30 +115,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-  
-  const btnMayor = document.getElementById('btn-texto-mayor');
-  const btnMenor = document.getElementById('btn-texto-menor');
-  const btnContraste = document.getElementById('btn-contraste');
-  let tamañoActual = parseFloat(getComputedStyle(document.body).fontSize);
-
-  btnMayor.addEventListener('click', function() {
-    tamañoActual = Math.min(tamañoActual + 2, 28);
-    document.body.style.fontSize = tamañoActual + 'px';
-  });
-
-  btnMenor.addEventListener('click', function() {
-    tamañoActual = Math.max(tamañoActual - 2, 12);
-    document.body.style.fontSize = tamañoActual + 'px';
-  });
-
-  
-  btnContraste.addEventListener('click', function() {
-    document.body.classList.toggle('alto-contraste');
-    const activo = document.body.classList.contains('alto-contraste');
-    btnContraste.setAttribute('aria-pressed', activo);
-    btnContraste.setAttribute('aria-label', activo ? 'Desactivar alto contraste' : 'Activar alto contraste');
-  });
-</script>
+<script src="https://benrom30.github.io/mi-pagina-blog/js/accesibilidad.js"></script>
 </body>
 </html>

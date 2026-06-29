@@ -1,9 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
-  <div class="container">
+  <div class="container d-flex align-items-center">
     <a class="navbar-brand fw-semibold" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+
+    <div class="d-flex align-items-center gap-2 ms-auto me-2" role="group" aria-label="Opciones de accesibilidad">
+      <button id="btn-texto-menor" class="btn-accesibilidad" aria-label="Reducir tamaño de texto">A-</button>
+      <button id="btn-texto-mayor" class="btn-accesibilidad" aria-label="Aumentar tamaño de texto">A+</button>
+      <button id="btn-contraste" class="btn-accesibilidad" aria-label="Activar alto contraste">◑</button>
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarPrincipal">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item">
@@ -17,11 +25,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link{{ if eq .Section "contacto" }} active{{ end }}"{{ if eq .Section "contacto" }} aria-current="page"{{ end }} href="{{ "/contacto/" | relURL }}">Contacto</a>
-        </li>
-        <li class="nav-item ms-3 d-flex align-items-center gap-2" role="group" aria-label="Opciones de accesibilidad">
-          <button id="btn-texto-menor" class="btn-accesibilidad" aria-label="Reducir tamaño de texto">A-</button>
-          <button id="btn-texto-mayor" class="btn-accesibilidad" aria-label="Aumentar tamaño de texto">A+</button>
-          <button id="btn-contraste" class="btn-accesibilidad" aria-label="Activar alto contraste">◑</button>
         </li>
       </ul>
     </div>
