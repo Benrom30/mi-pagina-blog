@@ -1,5 +1,5 @@
 ---
-title: "Introducción a Git y GitHub"
+title: "Git y GitHub"
 date: 2026-06-29T14:30:00+02:00
 draft: false
 ---
@@ -31,3 +31,5 @@ brew install git
 ---
 
 Una vez que tengas Git instalado, puedes crear un repositorio local y empezar a trabajar con él. Para compartir tu trabajo con otros desarrolladores, puedes usar GitHub, un servicio de alojamiento en la nube para proyectos de código abierto.
+
+En esta sección, aprenderás cómo crear y gestionar repositorios en GitHub, cómo colaborar con otros usuarios y cómo mantener tus proyectos actualizados y organizados.
