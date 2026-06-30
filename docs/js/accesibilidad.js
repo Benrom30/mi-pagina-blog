@@ -26,7 +26,7 @@ btnMayor.addEventListener('click', function () {
 
 // Aumentamos 2px el tamaño, pero nunca pasamos de 28px para no romper el diseño
 
-tamañoActual = Math.min(tamañoActual + 4, 36);
+tamañoActual = Math.min(tamañoActual + 4, 60);
 
 // Aplicamos el nuevo tamaño al elemento raíz del HTML (afecta a toda la página)
 
