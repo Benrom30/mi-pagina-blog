@@ -5,7 +5,7 @@
 </div>
 {{ if .Pages }}
 <ul class="list-unstyled">
-  {{ range .Pages }}
+  {{ range .Pages.ByDate }}
 <li class="mb-3">
 <h2 class="h4 mb-0">
 <a href="{{ .RelPermalink }}">{{ .Title }}</a>

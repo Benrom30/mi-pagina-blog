@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="programate">
+<title>Conectar tu computadora a GitHub con SSH - programate</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://benrom30.github.io/mi-pagina-blog/css/custom.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E◆%3C/text%3E%3C/svg%3E">
+
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand fw-semibold" href="https://benrom30.github.io/mi-pagina-blog/" aria-label="Ir al inicio de Programate"> </a>
+    <div class="d-flex align-items-center gap-2 ms-auto me-2" role="group" aria-label="Opciones de accesibilidad">
+      <button id="btn-texto-menor" class="btn-accesibilidad" aria-label="Reducir tamaño de texto">A-</button>
+      <button id="btn-texto-mayor" class="btn-accesibilidad" aria-label="Aumentar tamaño de texto">A+</button>
+      <button id="btn-contraste" class="btn-accesibilidad" aria-label="Activar alto contraste">◑</button>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarPrincipal">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="https://benrom30.github.io/mi-pagina-blog/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://benrom30.github.io/mi-pagina-blog/diario/">Mi diario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://benrom30.github.io/mi-pagina-blog/tutoriales/">Tutoriales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://benrom30.github.io/mi-pagina-blog/contacto/">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main id="contenido" class="container my-5">
+    
+<article>
+  <header class="mb-4">
+    <h1>Conectar tu computadora a GitHub con SSH</h1>
+    <p class="text-muted">
+      <time datetime="2026-10-27">27 de October, 2026</time>
+    </p>
+  </header>
+  <div class="article-content">
+    <p>Este es uno de los pasos que más puede intimidar al principio, pero si lo seguís con calma y en orden, no tiene ninguna complicación. La configuración SSH se hace <strong>una sola vez</strong> y después funciona sola para siempre: nunca más vas a tener que escribir tu contraseña de GitHub.</p>
+<p>Antes de empezar, asegurate de haber leído el tutorial anterior sobre trabajar en local, porque este paso se apoya en lo que vimos ahí.</p>
+<hr>
+<h2 id="qué-es-una-clave-ssh">¿Qué es una clave SSH?</h2>
+<p>SSH es un sistema de autenticación que funciona con dos claves que se generan juntas:</p>
+<ul>
+<li><strong>Clave privada:</strong> queda guardada en tu computadora. Nunca la compartís con nadie.</li>
+<li><strong>Clave pública:</strong> la registrás en GitHub. Es la que le permite a GitHub reconocer tu computadora.</li>
+</ul>
+<p>Cuando subís código, tu computadora y GitHub se identifican mutuamente usando estas dos claves. No hace falta contraseña porque la autenticación es automática.</p>
+<hr>
+<h2 id="paso-1-verificar-si-ya-tenés-claves-ssh">Paso 1: verificar si ya tenés claves SSH</h2>
+<p>Antes de crear claves nuevas, revisá si ya tenés alguna guardada. Abrí la terminal y ejecutá:</p>
+<p><strong>En Mac:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls ~/.ssh
+</span></span></code></pre></div><p><strong>En Windows (PowerShell):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls $env:USERPROFILE<span style="color:#ae81ff">\.</span>ssh
+</span></span></code></pre></div><p>Si ves archivos con nombres como <code>id_ed25519</code> y <code>id_ed25519.pub</code>, ya tenés claves creadas y podés saltear el paso 2 e ir directo al paso 3.</p>
+<p>Si la terminal dice que la carpeta no existe o está vacía, seguí al paso 2.</p>
+<hr>
+<h2 id="paso-2-crear-las-claves-ssh">Paso 2: crear las claves SSH</h2>
+<p>Ejecutá este comando reemplazando el email por el que usás en GitHub:</p>
+<p><strong>En Mac y Windows (es igual en los dos):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;tu@email.com&#34;</span>
+</span></span></code></pre></div><p>La terminal te va a hacer tres preguntas:</p>
+<p><strong>¿Dónde guardar la clave?</strong>
+Presioná Enter sin escribir nada para usar la ubicación por defecto. Es la ubicación correcta.</p>
+<p><strong>¿Contraseña para la clave (passphrase)?</strong>
+Podés dejarla vacía presionando Enter dos veces. Para uso personal está bien sin contraseña. Si le ponés una, te la va a pedir cada vez que uses SSH.</p>
+<p>Cuando termine vas a ver un dibujo ASCII en la terminal. Eso confirma que las claves se crearon correctamente.</p>
+<hr>
+<h2 id="paso-3-iniciar-el-agente-ssh">Paso 3: iniciar el agente SSH</h2>
+<p>El agente SSH es un programa que corre en segundo plano y administra tus claves para no tener que cargarlas manualmente cada vez.</p>
+<p><strong>En Mac:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ssh-agent -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p><strong>En Windows (PowerShell como administrador):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Start-Service ssh-agent
+</span></span></code></pre></div><p>Deberías ver un mensaje como <code>Agent pid 12345</code> en Mac, o ningún error en Windows. Eso significa que el agente está corriendo.</p>
+<hr>
+<h2 id="paso-4-agregar-la-clave-al-agente">Paso 4: agregar la clave al agente</h2>
+<p><strong>En Mac:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+</span></span></code></pre></div><p><strong>En Windows:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add $env:USERPROFILE<span style="color:#ae81ff">\.</span>ssh<span style="color:#ae81ff">\i</span>d_ed25519
+</span></span></code></pre></div><p>Si todo salió bien, la terminal dice algo como <code>Identity added</code>.</p>
+<hr>
+<h2 id="paso-5-copiar-la-clave-pública">Paso 5: copiar la clave pública</h2>
+<p>Ahora necesitás copiar el contenido de tu clave pública para pegarlo en GitHub. La clave pública es el archivo que termina en <code>.pub</code>.</p>
+<p><strong>En Mac</strong> (copia al portapapeles automáticamente):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pbcopy &lt; ~/.ssh/id_ed25519.pub
+</span></span></code></pre></div><p><strong>En Windows (PowerShell):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Get-Content $env:USERPROFILE<span style="color:#ae81ff">\.</span>ssh<span style="color:#ae81ff">\i</span>d_ed25519.pub | clip
+</span></span></code></pre></div><p>En los dos casos el comando no imprime nada en la terminal. Eso es normal: la clave ya está en tu portapapeles lista para pegar.</p>
+<hr>
+<h2 id="paso-6-registrar-la-clave-en-github">Paso 6: registrar la clave en GitHub</h2>
+<p>Ahora vas a GitHub a decirle que reconozca tu computadora:</p>
+<ol>
+<li>Entrá a <strong>github.com</strong> e iniciá sesión</li>
+<li>Hacé clic en tu foto de perfil arriba a la derecha</li>
+<li>Seleccioná <strong>Settings</strong></li>
+<li>En el menú de la izquierda buscá <strong>SSH and GPG keys</strong></li>
+<li>Hacé clic en el botón verde <strong>New SSH key</strong></li>
+<li>En el campo <strong>Title</strong> escribí algo que identifique tu computadora, por ejemplo <code>MacBook Personal</code> o <code>PC Windows</code></li>
+<li>En el campo <strong>Key</strong> pegá la clave que copiaste en el paso anterior (<code>Cmd + V</code> en Mac, <code>Ctrl + V</code> en Windows)</li>
+<li>Hacé clic en <strong>Add SSH key</strong></li>
+<li>GitHub puede pedirte que confirmes tu contraseña</li>
+</ol>
+<hr>
+<h2 id="paso-7-verificar-que-la-conexión-funciona">Paso 7: verificar que la conexión funciona</h2>
+<p>Este es el momento de la verdad. Ejecutá este comando (es igual en Mac y Windows):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
+</span></span></code></pre></div><p>La primera vez te va a preguntar si confiás en el servidor de GitHub:</p>
+<pre tabindex="0"><code>Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>Escribí <code>yes</code> y presioná Enter. Si todo está bien, vas a ver un mensaje como:</p>
+<pre tabindex="0"><code>Hi tu-usuario! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>Ese mensaje confirma que la conexión está funcionando. La parte que dice &ldquo;does not provide shell access&rdquo; es normal y no es un error.</p>
+<hr>
+<h2 id="qué-pasa-si-algo-no-funciona">¿Qué pasa si algo no funciona?</h2>
+<p>Lo más común es que algún paso haya quedado incompleto. Antes de entrar en pánico, revisá estas cosas en orden:</p>
+<ul>
+<li>¿Ejecutaste el comando del agente SSH antes de agregar la clave?</li>
+<li>¿Copiaste la clave pública (el archivo <code>.pub</code>) y no la privada?</li>
+<li>¿La clave que pegaste en GitHub no tiene espacios extra al principio o al final?</li>
+</ul>
+<p>Si después de revisar todo sigue sin funcionar, volvé al principio y repetí cada paso con calma. Es completamente normal necesitar más de un intento.</p>
+<hr>
+<h2 id="qué-sigue">¿Qué sigue?</h2>
+<p>Con la conexión SSH configurada, ya podés vincular tus repositorios locales con GitHub y empezar a subir tu código. Eso lo vemos en el próximo tutorial, donde conectamos el repo local con GitHub y hacemos nuestro primer <code>git push</code>.</p>
+<p>Tomátelo con calma. Este es uno de los pasos más técnicos de toda la configuración, y una vez que lo tenés resuelto no lo volvés a pensar nunca más.</p>
+
+  </div>
+  <p class="mt-5">
+    <a href="https://benrom30.github.io/mi-pagina-blog/tutoriales/git/">&larr; Volver a Git y GitHub</a>
+  </p>
+</article>
+
+</main>
+  <footer class="site-footer py-4 mt-5 border-top">
+  <div class="container text-center">
+    <p class="mb-0">
+      &copy; 2026 programate.
+      <a href="https://benrom30.github.io/mi-pagina-blog/contacto/">Contacto</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://benrom30.github.io/mi-pagina-blog/js/accesibilidad.js"></script>
+</body>
+</html>

@@ -6,8 +6,29 @@
     <description>Recent content on programate</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://benrom30.github.io/mi-pagina-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conectar tu computadora a GitHub con SSH</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git3/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git3/</guid>
+      <description>&lt;p&gt;Este es uno de los pasos que más puede intimidar al principio, pero si lo seguís con calma y en orden, no tiene ninguna complicación. La configuración SSH se hace &lt;strong&gt;una sola vez&lt;/strong&gt; y después funciona sola para siempre: nunca más vas a tener que escribir tu contraseña de GitHub.&lt;/p&gt;&#xA;&lt;p&gt;Antes de empezar, asegurate de haber leído el tutorial anterior sobre trabajar en local, porque este paso se apoya en lo que vimos ahí.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Primeros pasos en Git</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git1/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git1/</guid>
+      <description>&lt;p&gt;Git es una herramienta que registra los cambios que hacés en tu código a lo largo del tiempo. Podés pensar en él como un historial de versiones: si en algún momento algo se rompe, podés volver atrás. Si trabajás en equipo, cada persona puede trabajar en su parte sin pisar el trabajo de los demás.&lt;/p&gt;&#xA;&lt;p&gt;Esta guía es una introducción a los conceptos principales. Cada tema lo vamos a desarrollar en profundidad en tutoriales separados.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trabajando en local con Git</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git2/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tutoriales/git/git2/</guid>
+      <description>&lt;p&gt;Antes de conectarte a GitHub o pensar en subir código a internet, hay un paso previo que es fundamental entender: trabajar en local. Todo empieza acá, en tu propia computadora, antes de que nadie más vea tu código.&lt;/p&gt;&#xA;&lt;p&gt;Si no leíste el tutorial anterior sobre los primeros pasos en Git, te recomiendo empezar por ahí antes de continuar.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;qué-significa-trabajar-en-local&#34;&gt;¿Qué significa trabajar en local?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Local&lt;/strong&gt; significa tu propia computadora. Cuando trabajás en local, todos los cambios que hacés en tus archivos, todos los comandos que ejecutás, todo queda guardado únicamente en tu máquina. No hay internet de por medio, no hay GitHub, no hay nadie más que pueda ver lo que estás haciendo.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Diseño, accesibilidad y una amiga fundamental</title>
       <link>https://benrom30.github.io/mi-pagina-blog/diario/diario2/</link>
