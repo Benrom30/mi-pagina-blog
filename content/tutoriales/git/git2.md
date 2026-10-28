@@ -1,6 +1,6 @@
 ---
 title: "Trabajando en local con Git"
-date: 2026-10-27
+date: 2026-10-26
 draft: false
 ---
 
