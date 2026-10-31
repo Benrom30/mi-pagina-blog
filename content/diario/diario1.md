@@ -1,6 +1,7 @@
 ---
 title: "diario 1: mejorando la experiencia de usuarios con dificultades visuales"
 date: 2026-06-26T10:00:00+02:00
+weight: 1
 draft: false
 ---
 

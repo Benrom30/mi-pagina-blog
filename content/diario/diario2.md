@@ -1,6 +1,7 @@
 ---
 title: "Diseño, accesibilidad y una amiga fundamental"
 date: 2026-06-27
+weight: 2
 draft: false
 ---
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diario on programate</title>
+    <link>https://benrom30.github.io/mi-pagina-blog/tags/diario/</link>
+    <description>Recent content in Diario on programate</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://benrom30.github.io/mi-pagina-blog/tags/diario/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Volviendo al ruedo: aprender Python sin morir en el intento</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/diario/diario3/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/diario/diario3/</guid>
+      <description>&lt;p&gt;Hace mucho que no escribía por acá. La verdad es que estuve metido de lleno aprendiendo más Python y me olvidé por completo de subir contenido a la página. Pero acá estoy de vuelta, y quería contarte cómo viene el camino, con lo bueno y con lo no tan bueno.&lt;/p&gt;&#xA;&lt;h2 id=&#34;perdido-pero-con-ganas&#34;&gt;Perdido, pero con ganas&lt;/h2&gt;&#xA;&lt;p&gt;Estos últimos tiempos estuve un poco perdido, aunque suene irónico: con muchas ganas de aprender y, a la vez, sin saber bien para dónde ir. Hay conceptos que todavía me cuestan, y a veces me abruma pensar cuánto me falta por aprender, o mejor dicho, no saber cuánto me falta.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

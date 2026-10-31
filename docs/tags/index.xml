@@ -6,6 +6,35 @@
     <description>Recent content in Tags on programate</description>
     <generator>Hugo</generator>
     <language>es</language>
+    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://benrom30.github.io/mi-pagina-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aprendizaje</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tags/aprendizaje/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tags/aprendizaje/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diario</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tags/diario/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tags/diario/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tags/hugo/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://benrom30.github.io/mi-pagina-blog/tags/python/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://benrom30.github.io/mi-pagina-blog/tags/python/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
