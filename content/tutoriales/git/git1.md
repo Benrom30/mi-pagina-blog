@@ -1,6 +1,7 @@
 ---
 title: "Primeros pasos en Git"
 date: 2026-10-27
+weight: 1
 draft: false
 ---
 

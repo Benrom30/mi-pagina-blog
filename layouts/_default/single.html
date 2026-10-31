@@ -1,16 +1,28 @@
 {{ define "main" }}
 <article>
-  <header class="mb-4">
-    <h1>{{ .Title }}</h1>
-    <p class="text-muted">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 de January, 2006" }}</time>
-    </p>
-  </header>
-  <div class="article-content">
+<header class="mb-4">
+<h1>{{ .Title }}</h1>
+<p class="text-muted">
+<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 de January, 2006" }}</time>
+</p>
+</header>
+<div class="article-content">
     {{ .Content }}
+</div>
+<nav class="mt-5 d-flex justify-content-between align-items-center border-top pt-4" aria-label="Navegación entre páginas">
+  <div>
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+    {{ end }}
   </div>
-  <p class="mt-5">
-    <a href="{{ .Parent.RelPermalink }}">&larr; Volver a {{ .Parent.Title }}</a>
-  </p>
+  <div>
+    <a href="{{ .Parent.RelPermalink }}">Volver a {{ .Parent.Title }}</a>
+  </div>
+  <div>
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
+    {{ end }}
+  </div>
+</nav>
 </article>
 {{ end }}
